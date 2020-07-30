@@ -51,14 +51,91 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
+        <!-- 插入图像 -->
         <p>一个图像
-            <img src="backiee-20644-landscape.jpg" alt="图片加载失败，请稍后重试">
+            <img src="backiee-20644-landscape.jpg" alt="图片加载失败，请稍后重试" width="200" height="150">
         </p>
         <p>一个动图
-            <img src="hackanm.gif" alt="图片加载失败，请稍后重试">
+            <img src="hackanm.gif" alt="图片加载失败，请稍后重试" width="48" height="48">
         </p>
         <p>
             注意插入动图的语法和静态图的语法是一样的。
         </p>
+
+
+        <!-- 从不同的位置插入图片 -->
+        <p>一个来自文件夹的图像
+            <img src="backiee-20644-landscape.jpg" alt="图片加载失败" width="250" height="150">
+        </p>
+        <p>一个来自网上的图片
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596085372809&di=e3c65033ea7ce96435c5a351ed96caca&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F36%2F48%2F19300001357258133412489354717.jpg" alt="图片加载失败" width="200" height="200">
+        </p>
+
+
+        <!-- 在文字中排列图像 -->
+        <hr>
+        <br>
+        <h4>默认对齐的图像（align="bottom"）</h4>
+        <p>文本。
+            <img src="./hackanm.gif" alt="图片加载失败" width="48" height="48">
+            文本。
+        </p>
+        <h4>图片使用align="middle"</h4>
+        <p>文本。
+            <img src="./hackanm.gif" alt="图片加载失败" width="48" height="48" style="vertical-align: middle;">
+            文本。
+        </p>
+        <h4>图片使用align="top"</h4>
+        <p>文本。
+            <img src="./hackanm.gif" alt="图片加载失败" width="48" height="48" style="vertical-align: top;">
+        </p>
+        <p><b>注意:</b>在HTML 4中 align 属性已废弃，HTML5 已不支持该属性，可以使用 CSS 代替。</p>
+
+
+        <!-- 如何使图片浮动至段落的左边或右边 -->
+        <br>
+        <hr>
+        <br>
+        <p>
+            <img src="./hackanm.gif" alt="图片加载失败" width="48" height="48" style="float: left;">一个带图片的段落，图片浮动在文本的左边
+        </p>
+
+        <p>
+            <img src="hackanm.gif" alt="图片加载失败" width="48" height="48" style="float: right;">一个带图片的段落，图片浮动在文本的右边
+        </p>
+        <p><b>注意:</b> 在这里我们使用了 CSS float 属性，在HTML 4 中 float 属性已废弃，HTML5 已不支持该属性，可以使用 CSS 代替。</p>
+
+
+        <!-- 将图像作为一个链接使用 -->
+        <p>有边框的图片链接
+            <a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596087077814&di=e21e78db97b97417cf46a0ecb77cbb34&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20170221%2F20170221212912_cbff414ccd6113e1d49401b874e438c6_9.jpeg">
+                <img src="./hackanm.gif" alt="图片加载失败" style="border-color: red;border-width: 10;border-style: solid;" width="48" height="48">
+            </a>
+        </p>
+        <p>无边框图片链接
+            <a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596087077811&di=bde8386222e6dcaf8e316b78931e192e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2F2%2F41%2Fa0b1882426.jpg">
+                <img src="./hackanm.gif" alt="图片加载失败" style="border-color: red;border-style: none;" width="48" height="48">
+            </a>
+        </p>
+
+
+        <!-- 创建图像映射——带有可供点击区域的图像地图。其中的每个区域都是一个超级链接 -->
+        <br>
+        <hr>
+        <br>
+        <h3>点击土间埋的不同位置</h3>
+        <img src="./backiee-20644-landscape.jpg" alt="图片加载失败" width="500" height="350" style="border-style: solid;border-width: 10;border-color: salmon;" usemap="#girls">
+        <map name="girls">
+            <!-- 
+                shape指的是点击区域的形状，coords指的应该是链接区域在图片中的坐标（像素为单位）
+                1、矩形：shape="rect"，(左上角顶点坐标为(x1,y1)，右下角顶点坐标为(x2,y2))
+                2、圆形：shape="circle"，(圆心坐标为(X1,y1)，半径为r)
+                3、多边形：shape="poly"，(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......)
+             -->
+            <area shape="circle" coords="85,20,20" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596089337582&di=0615f634c99a1dc8b85619f4df93e8da&imgtype=0&src=http%3A%2F%2F01.minipic.eastday.com%2F20170401%2F20170401155212_09367f8f802c5aeded9eb7fe0ae74902_13.jpeg" alt="图片加载失败">
+            <area shape="circle" coords="120,40,15" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596090636224&di=f635a5a4548476d053596d34c59d9d5e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2F6%2Fd7%2F3a71f366cc.jpg" alt="图片加载失败">
+            <area shape="circle" coords="150,60,10" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596090980478&di=58d599eb50c5680e7bd62aacc5407858&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201302%2F21%2F213315g7r50o7yhwgo9og7.jpg" alt="图片加载失败">
+            <area shape="circle" coords="173,75,7" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596091043074&di=ed891119bb7bf843a647e10a51baa3c1&imgtype=0&src=http%3A%2F%2F00.minipic.eastday.com%2F20161210%2F20161210143050_7096c2f7d732d7afb7f0c4c6a357595d_10.jpeg" alt="图片加载失败">
+        </map>
     </body>
 </html>
