@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+
+<!-- 
+    HTML 表格
+    表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签定义），每行被分割为若干单元格（由 <td> 标签定义）。
+    字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+ -->
+
+
+<!-- 
+    HTML 表格和边框属性
+    如果不定义边框属性，表格将不显示边框。
+ -->
+
+
+<!-- 
+    HTML 表格表头
+    表格的表头使用 <th> 标签进行定义。
+    大多数浏览器会把表头显示为粗体居中的文本。
+ -->
+
+
+<!-- 
+    HTML 表格标签
+    标签	             描述
+    <table>	            定义表格
+    <th>	            定义表格的表头
+    <tr>                定义表格的行
+    <td>	            定义表格单元
+    <caption>	        定义表格标题
+    <colgroup>	        定义表格列的组
+    <col>	            定义用于表格列的属性
+    <thead>	            定义表格的页眉
+    <tbody>	            定义表格的主体
+    <tfoot>	            定义表格的页脚
+ -->
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML 表格</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <meta name="description" content="学习HTML表格">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta http-equiv="refresh" content="30">
+        <meta name="author" content="liuhailong">
+    </head>
+    <body>
+        <p>
+            每个表格从一个table标签开始<br>
+            每个表格行从tr标签开始<br>
+            每个表格的数据从td标签开始<br>
+        </p>
+        <h3>一行一列：</h3>
+        <table border="1">
+            <tr>
+                <td>100</td>
+            </tr>
+        </table>
+
+        <h3>一行三列：</h3>
+        <table border="1">
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+        </table>
+
+        <h3>两行三列：</h3>
+        <table border="1">
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+        </table>
+
+
+        <!-- 
+            没有边框的表格
+            border = "0"
+         -->
+         <h3>没有边框的表格</h3>
+        <table border="0">
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+            </tr>
+        </table>
+
+
+        <!-- 
+            表格中的表头(Heading)
+         -->
+        <h3>水平标题：</h3>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>图片</th>
+            </tr>
+            <tr>
+                <td>安竹拉贝比</td>
+                <td>31</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596100187957&di=60e2d6a782d100765d28a8ad739378d9&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201804%2F06%2F20180406005015_jrxcc.thumb.700_0.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+        </table>
+        <h3>垂直标题：</h3>
+        <table border="1">
+            <tr>
+                <th>林千鹿</th>
+                <td>27</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596100610835&di=307854c5ce9af7d02b65b74be29ba342&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180818%2F1bd11227270842aba7dfc2a9b697e948.jpeg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+            <tr>
+                <th>佟丽娅</th>
+                <td>37</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596100838789&di=a8167b4b59e415cf5a5548508cdcd039&imgtype=0&src=http%3A%2F%2Fimg2015.zdface.com%2F20150317%2Fe65cdafac2677329f93a72539cbff79a.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+            <tr>
+                <th>古力娜扎</th>
+                <td>28</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596101011851&di=aeaee5d9c9c555829af6bf756cf57f0e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2Fb%2Fc8%2Fa4861421439.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+        </table>
+
+
+        <!-- 
+            带标题 (caption) 的表格
+         -->
+        <h3>带标题 (caption) 的表格</h3>
+        <table border="1">
+            <caption>中国美女</caption>
+            <tr>
+                <th>姓名</th>
+                <th>图片</th>
+            </tr>
+            <tr>
+                <td>舒畅</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596101354374&di=17892b1accc5e922040fb828389ed565&imgtype=0&src=http%3A%2F%2Fdingyue.ws.126.net%2FrhWizjYwdxCfsOGKWFkcIbL1kzRKXWskz42mq0d%3D1Ksef1501556954899compressflag.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+            <tr>
+                <td>杨蓉</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596101494632&di=e825d52064bb9687ffd896afc0143b85&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201702%2F20%2F20170220011611_NvdY4.jpeg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+            <tr>
+                <td>张萌</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596101582274&di=718e56d635b6d3011903e9f076daf907&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn14%2F581%2Fw624h757%2F20180722%2Fc9ee-hfqtahi8239582.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+        </table>
+
+
+        <!-- 
+            跨行或跨列的表格单元格
+         -->
+        <h3>跨行或跨列的表格单元格</h3>
+        <table border="1">
+            <caption>单元格跨两列</caption>
+            <tr>
+                <th>姓名</th>
+                <th colspan="2">图片</th>
+            </tr>
+            <tr>
+                <td>万茜</td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596101964688&di=59421b97f0be4285df4f72ed11c266cc&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn22%2F212%2Fw1412h1200%2F20180321%2F1f6b-fyskeue4235601.jpg" alt="图片加载失败" width="140" height="210"></td>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596101964787&di=9e2ff37a3d3a0985a72c81c902a4dc8c&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201812%2F29%2F20181229230449_chkpn.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+        </table>
+        <table border="1">
+            <caption>单元格跨两行</caption>
+            <tr>
+                <th>姓名</th>
+                <td>图片</td>
+            </tr>
+            <tr>
+                <th rowspan="2">金晨</th>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596102352730&di=073c26f9a9787a304280adaf33e88de6&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw640h960%2F20180102%2Fd1f9-fyqefvx0918110.jpg" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+            <tr>
+                <td><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596102901551&di=bd9378505c30503675f34ee7af35dd32&imgtype=0&src=http%3A%2F%2Fpics3.baidu.com%2Ffeed%2F838ba61ea8d3fd1f6bcfa2bf5a9fcf1997ca5f4c.jpeg%3Ftoken%3Ddf066e6828fdf7aa915ea4153ff65d93" alt="图片加载失败" width="140" height="210"></td>
+            </tr>
+        </table>
+
+
+        <!-- 表格内的标签——在不同的元素内显示元素 -->
+        <h3>表格内的标签——在不同的元素内显示元素</h3>
+        
+    </body>
+</html>
+
